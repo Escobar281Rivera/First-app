@@ -1,3 +1,4 @@
+
 import 'reflect-metadata'
 import dotnev from 'dotenv'
 import Server from './server/server'
@@ -15,4 +16,7 @@ AppDataSource.initialize().then(async (conection) => {//async asincrona
     }
 }).
     catch((error) => console.log('***Error in connection with data base' + error))
+
+
+
 

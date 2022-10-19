@@ -20,11 +20,8 @@ class Server {
         this.app.use(express.urlencoded({ extended: true, limit: '50mb' }))
     }
 
-    /* A comment. */
-    /**
-     * The listen() function is a method of the Server class that listens for requests on the port
-     * specified in the constructor.
-     */
+
+
     listen() {
         this.app.listen((this.port = process.env.PORT || Server.PORT), () => {
             console.log(`Server running in  ${this.port}`)
