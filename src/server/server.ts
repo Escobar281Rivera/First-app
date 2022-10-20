@@ -1,5 +1,6 @@
 import express, { Application } from 'express'
 import morgan from 'morgan'
+import routes from './../routes/index.routes'
 
 class Server {
     private app: Application
@@ -8,6 +9,8 @@ class Server {
 
     constructor() {
         this.app = express()
+        this.middlewares()
+
     }
 
     middlewares() {
@@ -18,6 +21,8 @@ class Server {
 
         // * PARSE TO THE BODY
         this.app.use(express.urlencoded({ extended: true, limit: '50mb' }))
+
+        this.app.use('/', routes)
     }
 
 

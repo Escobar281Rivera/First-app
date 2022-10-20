@@ -7,7 +7,8 @@ export class Rol {
 
     @Column()
     rol: string
-    @Column()
+
+    @Column({ default: true })
     state: boolean
 
 }

@@ -5,6 +5,7 @@ import { Rol } from "./Rol";//importo rol porque es foranea
 export class User {
     @PrimaryGeneratedColumn()//Primarykey
     id: number
+
     @ManyToOne(() => Rol)//MaytoOne crea una variable de linkeo
     rol: Rol
 
